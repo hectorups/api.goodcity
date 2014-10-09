@@ -12,12 +12,10 @@ module Api::V1
     end
 
     private
-    def user_auth_details_params
-      params.require(:user_auth_details).permit(:otp_secret_key, :pin)
-    end
 
     def serializer
       Api::V1::UserSerializer
     end
+
   end
 end
